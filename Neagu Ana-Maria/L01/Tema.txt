@@ -1,1 +1,28 @@
-test
+
+Stackoverflow - pagina in care orice persoana pasionata sau care codeaza efectiv fie pentru ca are un proiect la lucru, scoala sau proiect propriu si intampina probleme, erori sau nelamuriri posetaza intrebarea sau secventa de cod cu problema si va primi raspunsuri de la ceilalti
+participanti insa se poate si gestiona o echipa dintr-o anumita companie cumparand un plan. Site-ul stackoverflow este o comunitate in care programatorii se ajuta reciproc 
+
+Pagina contine o parte despre activitatea in sine, produse si "for teams".In cazul activitatii lor "Despre":gasim o rubrica despre companie unde se descrie activitatea desfasurata unde se afla informatii despre infintarea paginii,cui se adreseaza, scopul, conducere,"lucreaza aici"-cu 
+joburi in diferite domenii, presa , cercetare si cum putem lua legatura cu ei ,alta pagina e dedicata unui blog, o alta face referire la un buletin informativ al dezvoltatorilor si pentru dezvoltatori, care perupune ca in fiecare saptamana sa apara o coletie de intrebari extraordinare,
+stiri si articole de pe blog cea de-a patra pagina din categoria "despre" are in vedere un podcast mai exact o conventie despre ce inseamna sa lucrezi in software 
+ 
+ Ne intoarecem la pagina de start care ne prezinta si produsele lor:platforma unde se dobandesc si imaprtasesc cunostinte si putem sa participam cu intrebari daca ne inrolam sau pur si simplu sa vizualizam intrebarile si raspunsurile altor persoane fara a fi necesara logarea. 
+De mentionat e faptul ca oricine poate posta o intrebare atata timp cat se logheaza si orice intrebare poate primi mai multe raspunsuri. Exista intrebari si raspunsuri pentru toate tipurile de limbaje de programare, tehnici de lucru,sisteme de operare, programe, aplicatii.
+Scopul principal al paginii este forumul cu intrebari si raspunsuri in care orice intrebare poate avea mai multe raspunsuri. 
+Alta gategorie de produs este "FOR TEAMS" acolo unde dezvoltatorii si tehnologii impartasesc cunostinte private cu colegii. O alta categorie este "TALENT" unde companiile atrag si recruteaza talente tehnologice si unde dezvoltatorii isi gasesc locuri de munca si 
+categoria "ADVERTISING" acolo unde companiile ajung la cel mai mare public din lume de dezvolatori si tehnologi.
+
+Tot din pagina de start ajunge la categoria pentru echipe unde putem gestiona si impartasii cunostintele dobandite. Pentru a incerca stackoverflow pentru echipe exista anumite planuri cu un anumit cost.Aici gasim si preturi, colaborare si resurse.
+
+Functionalitati pagina stackoverflow:
+1. Raspunsurile pot primi voturi iar cele mai bune raspunsuri ajung in varf astfel cele mai bune raspunsuri apar mai intai, incat sa fie usor de gasit
+2. Persoana care a intrebat poate marca un raspuns ca raspuns valid dar asta nu insemna ca este si cel mai bun raspuns 
+3. Se poate realiza si etichetarea intrebarilor. Fiecare intrebare poate avea pana la 5 etichete deoarece o intrebare poate fi legata de mai multe subiecte
+4. Se poate castiga reputatie atunci cand ceilalti participanti voteaza pentru postarile unei persoane astfel incat  scorul unei persoane creste o data ce indeplineste un anumit numar de voturi. Exista chiar si grade de reputatie
+5. Se pot edita intebarile si raspunsurile astfel incat daca este nevoie se pot inbunatatii pentru a primi sau oferi informatii cat mai clare
+6. Se pot debloca ecusoane pentru realizari speciale care se castiga pentru participarea pe site
+7. Pentru a realiza poastarea unei intrebari este neceasara crearea unui cont, iar logarea este o funtionalitate
+8. Se poate aplica la un job oferit in cadrul companiei lor
+9. Putem accesa prin intermediul paginii articole din presa - Stackoverflow in stiri
+10. Oricine ii poate contacta direct de pe pagina
+11. Gasim si un podcast iar diferitele informatii le putema asculta prin flux rss, SoundCloud, Spotify, etc
