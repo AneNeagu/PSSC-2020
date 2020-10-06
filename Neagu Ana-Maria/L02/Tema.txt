@@ -11,7 +11,7 @@ Evenimente:
 -Cresterea/Scaderea gradului de reputatie
 -Gasirea unui loc de munca
 
-Contextele:
+Contexte:
 - Contextul utilizatorului
 - Contextul intrebarii
 - Contextul raspunsului
