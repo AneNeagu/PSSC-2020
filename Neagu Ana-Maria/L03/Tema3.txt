@@ -25,8 +25,6 @@ Workflows documentation
 	//step3
 		return "New question accepted" event
 
-Workflows documentation
-
  Substep: "Validate question form"
   	*input: "Invalidated question from"
 	*output: "Validated question from"
@@ -36,9 +34,9 @@ Workflows documentation
  validate tag content
  If all validations passed then
 	*return validated question form
-	*User gets confirmation message
+	*user gets confirmation message
  Else
-	*Return validation error and Propose question for manual review
+	*Return validation error and propose question for manual review
 		
 
 		
