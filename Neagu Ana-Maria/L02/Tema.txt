@@ -14,7 +14,6 @@ Evenimente:
 Contexte:
 - Contextul utilizatorului
 - Contextul intrebarii
-- Contextul raspunsului
 - Contextul votului
 - Contextul etichetelor
 - Contextul marcajelor
