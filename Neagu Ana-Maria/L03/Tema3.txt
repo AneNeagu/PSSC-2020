@@ -21,8 +21,6 @@ Workflows documentation
 		If form is invalid then
 			stop
 	//step2
-		Send notification to confirm the question created
-	//step3
 		return "New question accepted" event
 
  Substep: "Validate question form"
