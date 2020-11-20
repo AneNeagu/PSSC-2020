@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <CodeGenerationRoslynVersion>0.4.88</CodeGenerationRoslynVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MicrosoftOrleans>3.2.2</MicrosoftOrleans>
+    <RemoteLinq>6.1.2</RemoteLinq>
+    <Akka>1.4.9</Akka>
+    <MicrosoftExtensions>3.1.4</MicrosoftExtensions>
+    <GraphQL>3.5.0-alpha0046</GraphQL>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>-->
+</Project>

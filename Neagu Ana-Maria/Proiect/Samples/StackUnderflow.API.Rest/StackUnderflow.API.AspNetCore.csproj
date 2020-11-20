@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
+    <PackageReference Include="Jaeger" Version="0.3.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Primitives\Access.Primitives.EFCore\Access.Primitives.EFCore.csproj" />
+    <ProjectReference Include="..\..\Primitives\Access.Primitives.IO.Extensions\Access.Primitives.IO.Extensions.csproj" />
+    <ProjectReference Include="..\..\Primitives\Access.Primitives.IO\Access.Primitives.IO.csproj" />
+    <ProjectReference Include="..\StackUnderflow.Core\StackUnderflow.Domain.Core.csproj" />
+    <ProjectReference Include="..\StackUnderflow.EF.Models\StackUnderflow.EF.csproj" />
+    <ProjectReference Include="..\StackUnderflow.Schema\StackUnderflow.DatabaseModel.csproj" />
+  </ItemGroup>
+
+
+</Project>

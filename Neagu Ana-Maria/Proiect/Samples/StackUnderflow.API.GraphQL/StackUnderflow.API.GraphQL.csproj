@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>60bbb964-f948-4657-b2b1-2893610d7f90</UserSecretsId>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="$(GraphQL)" />
+    <PackageReference Include="GraphQL.Server.Transports.WebSockets" Version="$(GraphQL)" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="$(GraphQL)" />
+    <PackageReference Include="GraphQL.Server.Ui.Altair" Version="$(GraphQL)" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Orleans.Core" Version="$(MicrosoftOrleans)" />
+    <PackageReference Include="Remote.Linq" Version="6.2.3" />
+    <PackageReference Include="Zuercher.Orleans.Persistence.Redis" Version="3.2.0" />
+    <PackageReference Include="Zuercher.Orleans.Streaming.Redis" Version="3.2.0" />
+    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
+    <PackageReference Include="Jaeger" Version="0.3.7" />
+    <PackageReference Include="Petabridge.Tracing.ApplicationInsights" Version="0.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\StackUnderflow.Schema\StackUnderflow.Domain.Schema.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Backend.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2266680e-9bde-4b03-8ddd-9c9b746181a6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Backend.Database</RootNamespace>
+    <AssemblyName>Backend.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <Recovery>SIMPLE</Recovery>
+    <AllowSnapshotIsolation>True</AllowSnapshotIsolation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="base" />
+    <Folder Include="base\Tables" />
+    <Folder Include="History" />
+    <Folder Include="Security" />
+    <Folder Include="Security\UDF" />
+    <Folder Include="Security\Policies" />
+    <Folder Include="Schemas" />
+    <Folder Include="Security\Views" />
+    <Folder Include="Admin" />
+    <Folder Include="Admin\Views" />
+    <Folder Include="User" />
+    <Folder Include="User\Views" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="Security\Users" />
+    <Folder Include="Security\Scripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="base\Tables\Badge.sql" />
+    <Build Include="base\Tables\Post.sql" />
+    <Build Include="base\Tables\PostTag.sql" />
+    <Build Include="base\Tables\PostType.sql" />
+    <Build Include="base\Tables\PostView.sql" />
+    <Build Include="base\Tables\Tag.sql" />
+    <Build Include="base\Tables\UserBadge.sql" />
+    <Build Include="base\Tables\Vote.sql" />
+    <Build Include="base\Tables\VoteType.sql" />
+    <Build Include="Security\UDF\fn_usersecuritypredicate.sql" />
+    <Build Include="Schemas\History.sql" />
+    <Build Include="Schemas\Security.sql" />
+    <Build Include="Security\Views\UserTenantAccess.sql" />
+    <Build Include="Schemas\Admin.sql" />
+    <Build Include="Schemas\User.sql" />
+    <Build Include="Schemas\Base.sql" />
+    <Build Include="User\Views\Badge.sql" />
+    <Build Include="User\Views\Post.sql" />
+    <Build Include="User\Views\PostTag.sql" />
+    <Build Include="User\Views\PostType.sql" />
+    <Build Include="User\Views\PostView.sql" />
+    <Build Include="User\Views\Tag.sql" />
+    <Build Include="User\Views\UserBadge.sql" />
+    <Build Include="User\Views\Vote.sql" />
+    <Build Include="User\Views\VoteType.sql" />
+    <Build Include="base\Tables\Tenant.sql" />
+    <Build Include="base\Tables\TenantUser.sql" />
+    <Build Include="base\Tables\User.sql" />
+    <Build Include="Admin\Views\Tenant.sql" />
+    <Build Include="Admin\Views\User.sql" />
+    <Build Include="Admin\Views\TenantUser.sql" />
+    <Build Include="StoredProcedures\base.BackofficeGrain.sql" />
+    <Build Include="StoredProcedures\base.BackofficeProjection.sql" />
+    <Build Include="StoredProcedures\base.QuestionsProjection.sql" />
+    <Build Include="StoredProcedures\base.UserProjection.sql" />
+    <Build Include="Security\Policies\UserPolicy.sql" />
+    <Build Include="User\Views\User.sql" />
+    <Build Include="Security\UDF\fn_usermaintenancesecuritypredicate.sql" />
+    <Build Include="Security\Users\Provisioning.sql" />
+    <Build Include="Security\Users\Provisioning_Login.sql" />
+    <Build Include="User\Views\TenantUser.sql" />
+    <Build Include="Security\Users\AppUser_Login.sql" />
+    <Build Include="Security\Users\AppUser.sql" />
+    <Build Include="Security\Users\ForumAdmin_Login.sql" />
+    <Build Include="Security\Users\ForumAdmin.sql" />
+    <Build Include="Security\UDF\fn_adminsecuritypredicate.sql" />
+    <Build Include="Security\UDF\fn_adminusermaintenance.sql" />
+    <Build Include="Security\Policies\ForumAdminPolicy.sql" />
+    <Build Include="StoredProcedures\dbo.BackofficeHttpController.sql" />
+    <Build Include="StoredProcedures\base.QuestionProjection.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Backend.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Seed.sql" />
+  </ItemGroup>
+</Project>
