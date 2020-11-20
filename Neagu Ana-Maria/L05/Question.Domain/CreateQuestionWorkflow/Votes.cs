@@ -29,7 +29,7 @@ namespace Question.Domain.CreateQuestionWorkflow
             }
             private static bool IsVotesValid(int votes)
             {
-                if (Votes == votes)
+                if (votes != 0)
                 {
                     return true;
                 }

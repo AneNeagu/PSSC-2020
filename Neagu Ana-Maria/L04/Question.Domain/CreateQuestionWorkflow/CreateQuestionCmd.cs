@@ -9,7 +9,7 @@ namespace Question.Domain.CreateQuestionWorkflow
     {
         [Required]
         [MaxLength(15)]
-        public string Title{ get;  set; }
+        public string Title{ get; set; }
         [Required]
         [MaxLength(30)]
         public string Body { get; set; }

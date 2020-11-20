@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="2776d1af-5766-4d65-9413-0de191ac44f5" ChangeDateTime="08/06/2020 22:03:28">
+    <Property Name="ElementName" Value="[base].[Badge].[UX_Badge_Name]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[base].[Badge]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[UX_base_Badge_Name]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1996913e-0ec4-4559-822a-397725e0e205" ChangeDateTime="08/25/2020 10:16:09">
+    <Property Name="ElementName" Value="[base].[Post].[QuestionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[base].[Post]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PostId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a9fafb89-6421-4b17-89d0-a4a7b8d2ebc9" ChangeDateTime="08/25/2020 10:19:37">
+    <Property Name="ElementName" Value="[base].[PostTag].[QuestionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[base].[PostTag]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PostId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dbb65140-f015-4492-95a4-e7d5a8164743" ChangeDateTime="08/25/2020 10:20:27">
+    <Property Name="ElementName" Value="[base].[PostView].[QuestionId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[base].[PostView]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PostId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0707ab24-526d-463c-b93f-39e3c39892e7" ChangeDateTime="08/25/2020 11:17:30">
+    <Property Name="ElementName" Value="[base].[Post].[RoWVersion]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[base].[Post]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RowVersion" />
+  </Operation>
+</Operations>

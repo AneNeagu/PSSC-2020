@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using static Profile.Domain.CreateProfileWorkflow.CreateProfileResult;
 using static Question.Domain.CreateQuestionWorkflow.CreateQuestionResult;
+using Question.Domain;
 
 namespace Test.App
 {
@@ -12,6 +13,8 @@ namespace Test.App
     {
         static void Main(string[] args)
         {
+
+           
             var cmd = new CreateProfileCmd("Ion", string.Empty, "Ionescu", "ion.inonescu@company.com");
             var cmd2 = new CreateQuestionCmd("Titlu", "Intrebare", "Java");
             var result = CreateProfile(cmd);
