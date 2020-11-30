@@ -21,7 +21,7 @@ namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
         public int QuestionId { get; }
         [Required]
         public Guid AuthorUserId { get; }
-        [Required]
+        //[Required]
         [MinLength(10)]
         [MaxLength(500)]
         public string Body { get; }

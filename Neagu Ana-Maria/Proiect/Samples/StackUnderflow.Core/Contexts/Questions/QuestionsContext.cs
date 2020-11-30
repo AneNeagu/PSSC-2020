@@ -11,11 +11,15 @@ using static StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledge
 using StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgementOp;
 using static StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp.SendReplyAuthorAcknowledgementResult;
 using StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp;
+using static StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionsOp.CreateQuestionsResult;
+using StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionsOp;
 
 namespace StackUnderflow.Domain.Core.Contexts.Questions
 {
     public static class QuestionsContext
     {
+        public static Port<ICreateQuestionsResult> CreateQuestion(CreateQuestionsCmd createQuestionsCmd) =>
+            NewPort<CreateQuestionsCmd, ICreateQuestionsResult>(createQuestionsCmd);
         public static Port<ICreateReplyResult> CreateReply(CreateReplyCmd createReplyCmd) =>
            NewPort<CreateReplyCmd, ICreateReplyResult>(createReplyCmd);
 

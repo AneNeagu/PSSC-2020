@@ -12,12 +12,12 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionsOp
 
         public class QuestionCreated : ICreateQuestionsResult
         {
-            public Guid QuestionId { get; private set; }
+            public int QuestionId { get; private set; }
             public string Title { get; private set; }
             public string Description { get; private set; }
             public string Tags { get; private set; }
 
-            public QuestionCreated(Guid QuestionId, string Title, string Description, string Tags)
+            public QuestionCreated(int QuestionId, string Title, string Description, string Tags)
             {
                 this.QuestionId = QuestionId;
                 this.Title = Title;

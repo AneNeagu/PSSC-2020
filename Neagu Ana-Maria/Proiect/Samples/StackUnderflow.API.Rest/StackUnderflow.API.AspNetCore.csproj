@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>e3d49f4d-9a6c-419a-bbc5-69bb35c69232</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
-    <PackageReference Include="Jaeger" Version="0.3.7" />
+    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.7.1" />
+    <PackageReference Include="Jaeger" Version="0.4.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -21,7 +21,7 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.CreateReplyOp
             var workflow = from valid in cmd.TryValidate()
                            let t = AddAnswerToQuestion(state, CreateAnswerFromCmd(cmd))
                            select t;
-
+            //state.Replies.Add(new DatabaseModel.Models.Reply { AuthorUserId = 1, Body = cmd.Body, QuestionId = cmd.QuestionId, ReplyId = 3 });
             var result =  await workflow.Match(
                 Succ: r => r,
                 Fail: ex => new ReplyNotCreated(ex.Message)
