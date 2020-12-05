@@ -18,6 +18,11 @@ using StackUnderflow.Domain.Core.Contexts.Questions;
 using StackUnderflow.EF;
 using Microsoft.EntityFrameworkCore;
 using StackUnderflow.Domain.Core.Contexts.Questions.CreateQuestionsOp;
+using StackUnderflow.DatabaseModel.Models;
+using Orleans;
+using StackUnderflow.Domain.Schema.Questions.CheckLanguageOp;
+using StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp;
+
 
 namespace StackUnderflow.API.Rest.Controllers
 {
@@ -39,11 +44,17 @@ namespace StackUnderflow.API.Rest.Controllers
         {
             var dep = new QuestionsDependencies();
             var replies = await _dbContext.Replies.ToListAsync();
-           
-            var ctx = new QuestionsWriteContext(replies);
-           
+
+            //var ctx = new QuestionsWriteContext(replies);
+            _dbContext.Replies.AttachRange(replies);
+
+            var ctx = new QuestionsWriteContext(new EFList<Reply>(_dbContext.Replies));
+
             var expr = from createTenantResult in QuestionsContext.CreateReply(cmd)
+                       from checkLanguageResult in QuestionsContext.CheckLanguage(new CheckLanguageCmd(cmd.Body))
+                       from sendAckAuthor in QuestionsContext.SendReplyAuthorAcknowledgement(new SendReplyAuthorAcknowledgementCmd(Guid.NewGuid(), 1, 2))
                        select createTenantResult;
+
 
             var r = await _interpreter.Interpret(expr, ctx, dep);
             //_dbContext.Replies.Add(new DatabaseModel.Models.Reply { Body = cmd.Body, AuthorUserId = 1, QuestionId = cmd.QuestionId, ReplyId = 4 });

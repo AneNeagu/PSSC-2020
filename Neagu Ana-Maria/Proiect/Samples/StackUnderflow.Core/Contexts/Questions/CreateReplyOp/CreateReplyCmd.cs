@@ -18,12 +18,12 @@ namespace StackUnderflow.Domain.Schema.Questions.CreateAnswerOp
             Body = body;
         }
         [Required]
-        public int QuestionId { get; }
+        public int QuestionId { get; set; }
         [Required]
-        public Guid AuthorUserId { get; }
+        public Guid AuthorUserId { get; set; }
         //[Required]
         [MinLength(10)]
         [MaxLength(500)]
-        public string Body { get; }
+        public string Body { get; set; }
     }
 }
