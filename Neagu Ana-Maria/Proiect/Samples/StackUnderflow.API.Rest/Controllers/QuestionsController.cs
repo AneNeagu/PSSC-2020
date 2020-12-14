@@ -22,7 +22,7 @@ using StackUnderflow.DatabaseModel.Models;
 using Orleans;
 using StackUnderflow.Domain.Schema.Questions.CheckLanguageOp;
 using StackUnderflow.Domain.Schema.Questions.SendReplyAuthorAcknowledgementOp;
-
+using StackUnderflow.Domain.Schema.Questions.SendQuestionOwnerAcknowledgementOp;
 
 namespace StackUnderflow.API.Rest.Controllers
 {
@@ -77,11 +77,18 @@ namespace StackUnderflow.API.Rest.Controllers
 
             var questions = await _dbContext.QuestionModel.ToListAsync();
 
-            var ctx = new QuestionsWriteContext(questions);
+            //var ctx = new QuestionsWriteContext(questions);
+            _dbContext.QuestionModel.AttachRange(questions);
+            var ctx = new QuestionsWriteContext(new EFList<QuestionModel>(_dbContext.QuestionModel));
 
-            var expr = from createTenantResult in QuestionsContext.CreateQuestion(cmd)
-                       select createTenantResult;
-
+            // var expr = from createTenantResult in QuestionsContext.CreateQuestion(cmd)
+            // select createTenantResult;
+            var expr = from CreateQuestionResult in QuestionsContext.CreateQuestion(cmd)
+                           //let checkLanguageCmd = new CheckLanguageCmd()
+                           //select CreateQuestionResult;
+                       from checkLanguageResult in QuestionsContext.CheckLanguage(new CheckLanguageCmd(cmd.Description))
+                       from sendAckToQuestionOwnerCmd in QuestionsContext.SendQuestionOwnerAcknowledgement(new SendQuestionOwnerAcknowledgementCmd(1, 2))
+                       select CreateQuestionResult;
             var r = await _interpreter.Interpret(expr, ctx, dep);
 
             await _dbContext.SaveChangesAsync();

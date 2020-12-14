@@ -31,5 +31,6 @@ namespace StackUnderflow.Domain.Core.Contexts.Questions.SendReplyAuthorAcknowled
 
             return new AcknowledgementSent(1, 2);
         }
+
     }
 }
