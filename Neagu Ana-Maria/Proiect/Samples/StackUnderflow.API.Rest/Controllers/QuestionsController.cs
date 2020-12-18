@@ -85,7 +85,7 @@ namespace StackUnderflow.API.Rest.Controllers
             // select createTenantResult;
             var expr = from CreateQuestionResult in QuestionsContext.CreateQuestion(cmd)
                            //let checkLanguageCmd = new CheckLanguageCmd()
-                           //select CreateQuestionResult;
+                         
                        from checkLanguageResult in QuestionsContext.CheckLanguage(new CheckLanguageCmd(cmd.Description))
                        from sendAckToQuestionOwnerCmd in QuestionsContext.SendQuestionOwnerAcknowledgement(new SendQuestionOwnerAcknowledgementCmd(1, 2))
                        select CreateQuestionResult;
