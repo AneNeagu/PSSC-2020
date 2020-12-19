@@ -43,19 +43,20 @@ namespace StackUnderflow.API.Rest.Controllers
         public async Task<IActionResult> CreateReply([FromBody] CreateReplyCmd cmd)
         {
             var dep = new QuestionsDependencies();
-            var replies = await _dbContext.Replies.ToListAsync();
 
+            var replies = await _dbContext.Replies.ToListAsync();
             //var ctx = new QuestionsWriteContext(replies);
             _dbContext.Replies.AttachRange(replies);
 
             var ctx = new QuestionsWriteContext(new EFList<Reply>(_dbContext.Replies));
 
+            //define
             var expr = from createTenantResult in QuestionsContext.CreateReply(cmd)
                        from checkLanguageResult in QuestionsContext.CheckLanguage(new CheckLanguageCmd(cmd.Body))
                        from sendAckAuthor in QuestionsContext.SendReplyAuthorAcknowledgement(new SendReplyAuthorAcknowledgementCmd(Guid.NewGuid(), 1, 2))
                        select createTenantResult;
 
-
+            //execute
             var r = await _interpreter.Interpret(expr, ctx, dep);
             //_dbContext.Replies.Add(new DatabaseModel.Models.Reply { Body = cmd.Body, AuthorUserId = 1, QuestionId = cmd.QuestionId, ReplyId = 4 });
             //var reply = await _dbContext.Replies.Where(r => r.ReplyId == 4).SingleOrDefaultAsync();
@@ -63,7 +64,7 @@ namespace StackUnderflow.API.Rest.Controllers
             //_dbContext.Replies.Update(reply);
             await _dbContext.SaveChangesAsync();
 
-
+            //adapt
             return r.Match(
                 succ => (IActionResult)Ok(succ.Body),
                 fail => BadRequest("Reply could not be added")
@@ -85,7 +86,7 @@ namespace StackUnderflow.API.Rest.Controllers
             // select createTenantResult;
             var expr = from CreateQuestionResult in QuestionsContext.CreateQuestion(cmd)
                            //let checkLanguageCmd = new CheckLanguageCmd()
-                         
+                           //select CreateQuestionResult;
                        from checkLanguageResult in QuestionsContext.CheckLanguage(new CheckLanguageCmd(cmd.Description))
                        from sendAckToQuestionOwnerCmd in QuestionsContext.SendQuestionOwnerAcknowledgement(new SendQuestionOwnerAcknowledgementCmd(1, 2))
                        select CreateQuestionResult;

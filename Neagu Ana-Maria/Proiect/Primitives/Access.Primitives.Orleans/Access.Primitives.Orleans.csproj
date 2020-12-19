@@ -6,7 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="$(MicrosoftOrleans)" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MicrosoftExtensions)" />
     <PackageReference Include="Microsoft.Orleans.Core" Version="$(MicrosoftOrleans)" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Remote.Linq" Version="$(RemoteLinq)" />
